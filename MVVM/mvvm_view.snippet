@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>View in MVVM</Title>
+      <Shortcut>mview</Shortcut>
+      <Description>Code Snippet for view in MVVM</Description>  
+      <Author>Lukasz Lawicki</Author>  
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+	<Literal>
+		<ID>YourViewModel</ID>   
+                <Default>YourViewModel</Default>   
+        </Literal>  
+        <Literal default="true" Editable="false">  
+	        <ID>classname</ID>   
+                <ToolTip>Class name</ToolTip>   
+                <Function>ClassName()</Function>   
+                <Default>ClassNamePlaceholder</Default>   
+       </Literal>  
+      </Declarations>
+
+      <Code Language="csharp">
+        <![CDATA[
+        #region Fields
+
+
+	#endregion
+
+	#region Properties
+
+	public $YourViewModel$ ViewModel
+        
+	{
+
+            get { return BindingContext as $YourViewModel$; }
+        
+	}
+
+	#endregion
+
+	#region Constructor(s)
+
+	public $classname$ ($YourViewModel$ viewModel)
+	{
+		BindingContext = viewModel;
+            
+		InitializeComponent();
+	}
+
+	#endregion
+
+	#region Methods
+
+
+	#endregion
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
