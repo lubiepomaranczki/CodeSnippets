@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mcmd</Shortcut>
+      <_Description>mvvm command</_Description>
+      <TemplateType>Unknown</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="CommandName">
+        <Default>notset</Default>
+      </Variable>
+      <Variable name="commandName">
+        <Default>notset</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private Command $commandName$Cmd;
+public Command $CommandName$Cmd => $commandName$Cmd ?? ($commandName$Cmd = new Command($CommandName$));
+
+private void $CommandName$(object obj)
+{
+    throw new NotImplementedException();
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
