@@ -4,7 +4,7 @@ Custom code snippets for VisualStudio
 # How to use? #
 1. Download source.
 2. Select snippet(s) you want to use.
-3. Copy the chosen snippet(s) into ~/Library/VisualStudio/7.0/Snippets/ 
+3. Copy the chosen snippet(s) into ~/Library/VisualStudio/7.0/Snippets/ (the folder is hidden by default, so either open in from terminal or make hidden files visible (see at the end of this readme how to).
 4. Use it ;-)
 
 # NOTE 
@@ -42,3 +42,11 @@ Generates regions in class for: fields, properties, constructor(s), methods
 Shorcut: mview
 
 Generates code for view in MVVM with constructor and propertie for ViewModel. Also adds regions
+
+
+### Show hidden files in Finder
+1. Open terminal,
+2. Type `defaults write com.apple.finder AppleShowAllFiles YES` and press Enter
+3. Make sure you don't have any thing important open in Finder - we need to restart it.
+4. Type `sudo killall Finder` - Boom the Finders got closed!
+5. Enjoy your hidden files visible
